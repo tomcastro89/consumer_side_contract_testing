@@ -1,6 +1,6 @@
 package tcastrovillari.consumer_driven_contract;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -19,7 +19,7 @@ public class RestTest {
     private MockMvc mockMvc;
 
     @Test
-    void endpointShouldReturn200() throws Exception {
+    public void endpointShouldReturn200() throws Exception {
         mockMvc.perform(get("/endpoint"))
                 .andExpect(status().isOk());
     }
